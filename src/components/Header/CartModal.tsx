@@ -1,9 +1,8 @@
-import CheckoutCart from "./CheckoutCart.jsx";
+import CheckoutCart from "./CheckoutCart.tsx";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import { useState } from "react";
 import { CartModal } from "../../types.js";
 
-//si falla es por el tipo de preferenceId
 export default function CartModal({
   cartState,
   checkoutStatus,
@@ -13,7 +12,7 @@ export default function CartModal({
   const [preferenceId, setPreferenceId] = useState("");
   const [walletRendered, setWalletRendered] = useState(false);
 
-  initMercadoPago(import.meta.env.VITE_MERCADOPAGO_KEY, {
+  initMercadoPago("TEST-c8dcbcea-ce8d-44f1-baa0-76570e585fa6", {
     locale: "es-AR",
   });
 
