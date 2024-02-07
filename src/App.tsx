@@ -2,10 +2,14 @@ import useMenu from "./hooks/useMenu.ts";
 import useCart from "./hooks/useCart.ts";
 import useCountProduct from "./hooks/useCountProduct.ts";
 import useModalState from "./hooks/useModalState.ts";
-// import useSlider from "./hooks/useSlider.ts";
+import useResize from "./hooks/useResize.ts";
+import useSlider from "./hooks/useSlider.ts";
 import ModalDesktopProduct from "./components/ModalDesktopProduct.tsx";
 import Header from "./components/Header.tsx";
-import Home from "./components/Home.tsx";
+import ShoppingCartItem from "./components/ShoppingCart/ShoppingCartItem";
+import TextContent from "./components/TextContent";
+import MobileProductImage from "./components/ProductImage/MobileProductImage.tsx";
+import DesktopProductImage from "./components/ProductImage/DesktopProductImage.tsx";
 
 export default function App() {
   //menu
@@ -23,18 +27,14 @@ export default function App() {
     deleteItemCart,
   } = useCountProduct();
 
-  //slider
-  // const { next, previous } = useSlider();
-  const { modalDesktop, setModalDesktop } = useModalState();
+  const { next, previous, selectedImage } = useSlider();
+  const { screenSize } = useResize();
+  const { modalDesktop, setModalDesktop, handleModalDesktop } = useModalState();
 
   return (
     <>
       {modalDesktop && (
-        <ModalDesktopProduct
-          onModalDesktop={() => setModalDesktop(false)}
-          // onNext={next}
-          // onPrev={previous}
-        />
+        <ModalDesktopProduct onModalDesktop={() => setModalDesktop(false)} />
       )}
       <Header
         menu={menuIsActive}
@@ -45,12 +45,28 @@ export default function App() {
         checkoutStatus={checkoutCart}
         onDelete={deleteItemCart}
       />
-      <Home
-        addItemCart={addItemCart}
-        addProduct={addProduct}
-        countProduct={countProduct}
-        subtractProduct={subtractProduct}
-      />
+      <main className="flex flex-col md:flex-row">
+        {screenSize < 768 ? (
+          <MobileProductImage
+            selectImg={selectedImage}
+            onPrev={previous}
+            onNext={next}
+          />
+        ) : (
+          <DesktopProductImage onModalDesktop={handleModalDesktop} />
+        )}
+
+        <article className="flex flex-col md:w-[40%] md:mt-4">
+          <TextContent />
+
+          <ShoppingCartItem
+            countProduct={countProduct}
+            subtractProduct={subtractProduct}
+            addProduct={addProduct}
+            addItemCart={addItemCart}
+          />
+        </article>
+      </main>
     </>
   );
 }

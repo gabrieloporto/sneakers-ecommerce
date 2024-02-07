@@ -35,7 +35,7 @@ export default function ModalDesktopProduct({
         </button>
         <ProductThumbnailImage
           selectedImage={selectedImg}
-          onThumbnailSelect={handleThumbnailSelect}
+          onThumbnailSelect={() => handleThumbnailSelect(selectedImg)}
         />
       </div>
     </article>
