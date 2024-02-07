@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Perfiles de GitHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tabla de contenidos
 
-Currently, two official plugins are available:
+- [Proyecto](#proyecto)
+  - [Descripción](#descripción)
+  - [Imagen](#imagen)
+  - [Datos de pago](#datos-de-pago)
+- [Proceso](#proceso)
+  - [Tecnologías y herramientas](#tecnologías-y-herramientas)
+  - [Recursos utilizados](#recursos-utilizados)
+- [Autor](#autor)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Proyecto
 
-## Expanding the ESLint configuration
+### Descripción
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Este proyecto es una solucion al [E-commerce product page challenge de Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) pero con integracion de mercado pago como pasarela de pago.
 
-- Configure the top-level `parserOptions` property like this:
+### Imagen
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![Captura de pantalla del Proyecto](/src/assets/Screenshot-Sneakers.png)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Datos de Pago
+
+Al proceder con el proceso de pago mediante el botón "Checkout", encontrarás a continuación el botón para realizar el pago a través de MercadoPago. El pago debe realizarse utilizando la opción de tarjeta de débito. A continuación, se te solicitarán los siguientes datos:
+
+**Datos de Tarjetas (Tres opciones válidas):**
+
+1. **Mastercard:**
+
+   - Número de tarjeta: 5031 7557 3453 0604
+   - Vencimiento: 11/25
+   - CVV: 123
+
+2. **Visa:**
+
+   - Número de tarjeta: 4509 9535 6623 3704
+   - Vencimiento: 11/25
+   - CVV: 123
+
+3. **American Express:**
+   - Número de tarjeta: 3711 803032 57522
+   - Vencimiento: 11/25
+   - CVV: 1234
+
+**Datos Personales:**
+Para garantizar la aprobación de tu pago, se requiere la inclusión de los siguientes datos personales:
+
+- **Nombre:** APRO
+- **DNI:** 12345678
+
+## Proceso
+
+### Tecnologías y herramientas
+
+El proyecto está construido con:
+
+- HTML5 Semántico
+- Responsive Design
+- Tailwind CSS
+- TypeScript
+- Vite
+- React
+
+### Recursos utilizados
+
+- [Documentación de la API de MercadoPago](https://www.mercadopago.com.ar/developers/es)
+
+## Autor
+
+- Sitio desarrollado por [Gabriel Oporto](https://github.com/gabrieloporto)

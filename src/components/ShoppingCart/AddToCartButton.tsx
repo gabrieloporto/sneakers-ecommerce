@@ -9,7 +9,7 @@ export default function AddToCartButton({ onAddCart }: AddtoCart) {
     >
       <img src={cartBtn} width={16} height={15} alt="add-cart" />
       <span>
-        <strong>Add to cart</strong>
+        <strong className="ml-2">Añadir al carrito</strong>
       </span>
     </button>
   );

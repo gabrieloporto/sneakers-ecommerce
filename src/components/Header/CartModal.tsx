@@ -61,7 +61,7 @@ export default function CartModal({
              preferenceId && walletRendered && itemsInCart > 0 ? "h-96" : "h-72"
            } top-12 -left-[17rem] md:-left-[10rem] rounded-lg shadow-2xl object-contain`}
     >
-      <h3 className="font-bold p-6">Cart</h3>
+      <h3 className="font-bold p-6">Carrito</h3>
       {checkoutStatus ? (
         <CheckoutCart
           itemsInCart={itemsInCart}
@@ -77,7 +77,7 @@ export default function CartModal({
         </CheckoutCart>
       ) : (
         <p className="text-center text-darkGrayishBlue font-bold mt-20">
-          Your cart is empty.
+          Tu carrito está vacío.
         </p>
       )}
     </div>
