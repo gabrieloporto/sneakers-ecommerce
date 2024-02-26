@@ -1,4 +1,4 @@
-# Perfiles de GitHub
+# Sneakers Product Page
 
 ## Tabla de contenidos
 
