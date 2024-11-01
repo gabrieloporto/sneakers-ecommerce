@@ -15,7 +15,7 @@ export default function Cart({
       <p
         className={`${
           itemsAdded > 0 ? "absolute" : "hidden"
-        } -top-[2px] -right-[6px] md:top-[6px] bg-orange text-white w-4 h-3 rounded-full text-[8px] text-center font-bold z-[99999]`}
+        } -top-[2px] -right-[6px] md:top-[6px] bg-blue text-white w-4 h-3 rounded-full text-[8px] text-center font-bold z-[99999]`}
       >
         {itemsAdded}
       </p>

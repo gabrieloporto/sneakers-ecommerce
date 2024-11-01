@@ -8,7 +8,7 @@ export default function ThumbnailComponent({
   return (
     <button
       className={`mt-8 rounded-xl transition-all duration-[125ms] ease-in-out ${
-        isSelected ? "border-2 border-solid border-orange" : ""
+        isSelected ? "border-2 border-solid border-blue" : ""
       }`}
       onClick={onClick}
     >

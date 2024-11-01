@@ -9,7 +9,7 @@ export default function CheckoutButton({
   return (
     <>
       <button
-        className="flex w-full h-12 justify-center items-center bg-orange text-white rounded-md hover:opacity-70"
+        className="flex w-full h-12 justify-center items-center bg-blue text-white rounded-md hover:opacity-70"
         onClick={handleBuy}
       >
         <span>

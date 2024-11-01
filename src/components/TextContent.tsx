@@ -1,7 +1,7 @@
 export default function TextContent() {
   return (
     <section className="m-4 mt-8">
-      <h3 className="text-orange text-xs font-bold tracking-widest uppercase">
+      <h3 className="text-blue text-xs font-bold tracking-widest uppercase">
         Empresa de sneakers
       </h3>
       <h1 className="text-3xl font-bold my-4">

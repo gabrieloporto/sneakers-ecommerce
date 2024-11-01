@@ -11,19 +11,19 @@ export default function Nav({ menu, onMenu }: MenuAndLogo) {
       } flex-col font-bold md:flex md:flex-row md:min-h-max md:p-0 md:font-normal md:text-darkGrayishBlue md:text-sm md:mt-6 md:ml-4 md:h-14`}
     >
       <MenuButtonClose onMenu={onMenu} />
-      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-orange md:hover:text-black transition-all duration-300 ease-in-out">
+      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Colecciones
       </a>
-      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-orange md:hover:text-black transition-all duration-300 ease-in-out">
+      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Hombre
       </a>
-      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-orange md:hover:text-black transition-all duration-300 ease-in-out">
+      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Mujer
       </a>
-      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-orange md:hover:text-black transition-all duration-300 ease-in-out">
+      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Acerca
       </a>
-      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-orange md:hover:text-black transition-all duration-300 ease-in-out">
+      <a className="cursor-pointer hover:opacity-30 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Contacto
       </a>
     </nav>

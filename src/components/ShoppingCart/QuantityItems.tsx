@@ -6,7 +6,7 @@ export default function QuantityItems({
   count,
 }: QuantityItemsApp) {
   return (
-    <div className="w-full h-8 text-2xl font-bold flex items-center justify-between text-orange my-4 px-4">
+    <div className="w-full h-8 text-2xl font-bold flex items-center justify-between text-blue my-4 px-4">
       <button
         className="hover:opacity-70 transition-all duration-[125ms] ease-in-out"
         onClick={onSubtract}
