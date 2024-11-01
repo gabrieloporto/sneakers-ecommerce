@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 src/server/
+.env
 .env.local
 

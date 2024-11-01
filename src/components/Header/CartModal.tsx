@@ -13,7 +13,7 @@ export default function CartModal({
   const [walletRendered, setWalletRendered] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(true);
 
-  initMercadoPago("TEST-c8dcbcea-ce8d-44f1-baa0-76570e585fa6", {
+  initMercadoPago(import.meta.env.VITE_MP_PUBLIC_KEY, {
     locale: "es-AR",
   });
 
@@ -27,7 +27,7 @@ export default function CartModal({
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            title: "Low-profile sneaker",
+            title: "Sneaker estilo urbano",
             quantity: itemsInCart,
             price: 5000,
           }),
