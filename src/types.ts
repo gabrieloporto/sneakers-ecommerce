@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface Header {
+export interface HeaderApp {
   menu: boolean;
   onMenu: () => void;
   onCart: () => void;
