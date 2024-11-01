@@ -17,7 +17,7 @@ export interface Home {
   addItemCart: () => void;
 }
 
-export interface ModalDesktopProduct {
+export interface ModalDesktopProductApp {
   onModalDesktop: () => void;
 }
 
@@ -65,13 +65,13 @@ export interface CheckoutButton {
   children: ReactNode;
 }
 
-export interface MobileProductImage {
+export interface MobileProductImageApp {
   selectImg: string;
   onNext: () => void;
   onPrev: () => void;
 }
 
-export interface CheckoutDeleteButton {
+export interface CheckoutDeleteButtonApp {
   onDelete: () => void;
 }
 
@@ -84,13 +84,13 @@ export interface ProductThumbnailImage {
   onThumbnailSelect: (arg0: string) => void;
 }
 
-export interface ThumbnailComponent {
+export interface ThumbnailComponentApp {
   imgThumbnail: string;
   isSelected: boolean;
   onClick: () => void;
 }
 
-export interface QuantityItems {
+export interface QuantityItemsApp {
   onSubtract: () => void;
   onAdd: () => void;
   count: number;
