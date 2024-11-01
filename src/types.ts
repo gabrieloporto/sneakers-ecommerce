@@ -58,7 +58,7 @@ export interface CheckOutDetailProduct {
   itemsInCart: number;
 }
 
-export interface CheckoutButton {
+export interface CheckoutButtonApp {
   handleBuy: () => void;
   preferenceId: string;
   walletRendered: boolean;
