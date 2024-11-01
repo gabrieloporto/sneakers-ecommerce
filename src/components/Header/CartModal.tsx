@@ -13,7 +13,7 @@ export default function CartModal({
   const [walletRendered, setWalletRendered] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(true);
 
-  initMercadoPago(import.meta.env.VITE_MP_PUBLIC_KEY, {
+  initMercadoPago("APP_USR-4ff5bdf7-60c5-4670-817f-9ec7b8f82dfe", {
     locale: "es-AR",
   });
 
