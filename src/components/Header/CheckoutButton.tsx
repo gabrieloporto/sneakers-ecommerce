@@ -1,11 +1,11 @@
-import { CheckoutButton } from "../../types";
+import { CheckoutButtonApp } from "../../types";
 
 export default function CheckoutButton({
   handleBuy,
   preferenceId,
   walletRendered,
   children,
-}: CheckoutButton) {
+}: CheckoutButtonApp) {
   return (
     <>
       <button
