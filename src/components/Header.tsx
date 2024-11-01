@@ -1,7 +1,7 @@
 import MenuAndLogo from "./Header/MenuAndLogo.tsx";
 import Cart from "./Header/Cart.tsx";
 import avatar from ".././assets/image-avatar.png";
-import { Header } from "../types.ts";
+import { HeaderApp } from "../types.ts";
 
 export default function Header({
   menu,
@@ -11,9 +11,9 @@ export default function Header({
   cartState,
   itemsAdded,
   checkoutStatus,
-}: Header) {
+}: HeaderApp) {
   return (
-    <header className="sticky p-4 top-0 left-0 right-0 z-[1000] bg-white flex justify-between h-16 items-center md:h-[5.5rem] md:mb-14">
+    <header className="sticky p-4 top-0 left-0 right-0 z-[1000] bg-white flex justify-between h-16 items-center md:h-[5.5rem] md:mb-8">
       <MenuAndLogo menu={menu} onMenu={onMenu} />
       <article className="flex gap-4 md:gap-10 md:mt-4">
         <Cart
