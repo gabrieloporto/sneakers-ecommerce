@@ -1,11 +1,14 @@
 import deleteIcon from "../.././assets/icon-delete.svg";
-import { CheckoutDeleteButton } from "../../types";
+import { CheckoutDeleteButtonApp } from "../../types";
 
 export default function CheckoutDeleteButton({
   onDelete,
-}: CheckoutDeleteButton) {
+}: CheckoutDeleteButtonApp) {
   return (
-    <button onClick={onDelete}>
+    <button
+      onClick={onDelete}
+      className="transition-all duration-[125ms] ease-in-out"
+    >
       <img src={deleteIcon} alt="delete" />
     </button>
   );

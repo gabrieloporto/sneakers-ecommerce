@@ -1,13 +1,13 @@
-import { ThumbnailComponent } from "../../types";
+import { ThumbnailComponentApp } from "../../types";
 
 export default function ThumbnailComponent({
   imgThumbnail,
   isSelected,
   onClick,
-}: ThumbnailComponent) {
+}: ThumbnailComponentApp) {
   return (
     <button
-      className={`mt-8 rounded-xl ${
+      className={`mt-8 rounded-xl transition-all duration-[125ms] ease-in-out ${
         isSelected ? "border-2 border-solid border-orange" : ""
       }`}
       onClick={onClick}
@@ -15,7 +15,7 @@ export default function ThumbnailComponent({
       <img
         src={imgThumbnail}
         alt="image-thumbnail"
-        className={`rounded-lg hover:opacity-50 ${
+        className={`rounded-lg hover:opacity-50 transition-all duration-[125ms] ease-in-out ${
           isSelected ? "opacity-30" : ""
         }`}
       />
