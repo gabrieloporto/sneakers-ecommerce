@@ -1,7 +1,7 @@
-import { MenuAndLogo } from "../../types.js";
+import { MenuAndLogoApp } from "../../types.js";
 import MenuButtonClose from "./MenuButtonClose.jsx";
 
-export default function Nav({ menu, onMenu }: MenuAndLogo) {
+export default function Nav({ menu, onMenu }: MenuAndLogoApp) {
   return (
     <nav
       className={`${

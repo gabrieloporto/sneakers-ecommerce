@@ -1,11 +1,11 @@
 import ThumbnailComponent from "./ThumbnailComponent";
 import { images, thumbnails } from "../../constants";
-import { ProductThumbnailImage } from "../../types";
+import { ProductThumbnailImageApp } from "../../types";
 
 export default function ProductThumbnailImage({
   selectedImage,
   onThumbnailSelect,
-}: ProductThumbnailImage) {
+}: ProductThumbnailImageApp) {
   const handleThumbnailClick = (index: number) =>
     onThumbnailSelect(images[index]);
 

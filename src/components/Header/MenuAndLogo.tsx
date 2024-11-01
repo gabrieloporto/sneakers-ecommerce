@@ -1,10 +1,10 @@
 import logo from "../.././assets/logo.svg";
-import { MenuAndLogo } from "../../types";
+import { MenuAndLogoApp } from "../../types";
 
 import MenuButton from "./MenuButton";
 import Nav from "./Nav";
 
-export default function MenuAndLogo({ menu, onMenu }: MenuAndLogo) {
+export default function MenuAndLogo({ menu, onMenu }: MenuAndLogoApp) {
   return (
     <article className="flex gap-4 md:h-full">
       <MenuButton onMenu={onMenu} />

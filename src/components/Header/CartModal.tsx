@@ -1,14 +1,14 @@
 import CheckoutCart from "./CheckoutCart.tsx";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import { useState } from "react";
-import { CartModal } from "../../types.js";
+import { CartModalApp } from "../../types.js";
 
 export default function CartModal({
   cartState,
   checkoutStatus,
   itemsInCart,
   onDelete,
-}: CartModal) {
+}: CartModalApp) {
   const [preferenceId, setPreferenceId] = useState("");
   const [walletRendered, setWalletRendered] = useState(false);
 

@@ -21,7 +21,7 @@ export interface ModalDesktopProductApp {
   onModalDesktop: () => void;
 }
 
-export interface MenuAndLogo {
+export interface MenuAndLogoApp {
   menu: boolean;
   onMenu: () => void;
 }
@@ -38,14 +38,14 @@ export interface OnMenu {
   onMenu: () => void;
 }
 
-export interface CartModal {
+export interface CartModalApp {
   cartState: boolean;
   checkoutStatus: boolean;
   itemsInCart: number;
   onDelete: () => void;
 }
 
-export interface CheckoutCart {
+export interface CheckoutCartApp {
   itemsInCart: number;
   onDelete: () => void;
   handleBuy: () => void;
@@ -75,11 +75,11 @@ export interface CheckoutDeleteButtonApp {
   onDelete: () => void;
 }
 
-export interface DesktopProductImage {
+export interface DesktopProductImageApp {
   onModalDesktop: () => void;
 }
 
-export interface ProductThumbnailImage {
+export interface ProductThumbnailImageApp {
   selectedImage: string;
   onThumbnailSelect: (arg0: string) => void;
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import imgProduct1 from "../.././assets/image-product-1.jpg";
 import ProductThumbnailImage from "./ProductThumbnailImage.tsx";
-import { DesktopProductImage } from "../../types.js";
+import { DesktopProductImageApp } from "../../types.js";
 
 export default function DesktopProductImage({
   onModalDesktop,
-}: DesktopProductImage) {
+}: DesktopProductImageApp) {
   const [selectedImage, setSelectedImage] = useState(imgProduct1);
 
   const handleThumbnailSelect = (image: string) => setSelectedImage(image);
