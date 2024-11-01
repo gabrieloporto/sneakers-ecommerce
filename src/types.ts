@@ -26,7 +26,7 @@ export interface MenuAndLogo {
   onMenu: () => void;
 }
 
-export interface Cart {
+export interface CartApp {
   itemsAdded: number;
   cartState: boolean;
   onCart: () => void;

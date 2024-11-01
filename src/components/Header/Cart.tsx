@@ -1,7 +1,7 @@
 import cart from "../.././assets/icon-cart.svg";
 import cartActiveIcon from "../.././assets/icon-cart-active.svg";
 import CartModal from "./CartModal.jsx";
-import { Cart } from "../../types.ts";
+import { CartApp } from "../../types.ts";
 
 export default function Cart({
   itemsAdded,
@@ -9,7 +9,7 @@ export default function Cart({
   onCart,
   checkoutStatus,
   onDelete,
-}: Cart) {
+}: CartApp) {
   return (
     <section className="relative flex items-center justify-center">
       <p
