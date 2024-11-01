@@ -11,6 +11,7 @@ export default function CartModal({
 }: CartModalApp) {
   const [preferenceId, setPreferenceId] = useState("");
   const [walletRendered, setWalletRendered] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(true);
 
   initMercadoPago("TEST-c8dcbcea-ce8d-44f1-baa0-76570e585fa6", {
     locale: "es-AR",
@@ -50,6 +51,7 @@ export default function CartModal({
     if (id) {
       setPreferenceId(id);
       setWalletRendered(true);
+      setButtonVisible(false);
     }
   };
 
@@ -68,6 +70,7 @@ export default function CartModal({
           handleBuy={handleBuy}
           preferenceId={preferenceId}
           walletRendered={walletRendered}
+          buttonVisible={buttonVisible}
         >
           <Wallet
             initialization={{ preferenceId: preferenceId }}

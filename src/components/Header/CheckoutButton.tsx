@@ -5,11 +5,14 @@ export default function CheckoutButton({
   preferenceId,
   walletRendered,
   children,
+  buttonVisible,
 }: CheckoutButtonApp) {
   return (
     <>
       <button
-        className="flex w-full h-12 justify-center items-center bg-blue text-white rounded-md hover:opacity-70"
+        className={`${
+          buttonVisible ? "flex" : "hidden"
+        } w-full h-12 justify-center items-center bg-blue text-white rounded-md hover:opacity-70`}
         onClick={handleBuy}
       >
         <span>

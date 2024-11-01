@@ -10,6 +10,7 @@ export default function CheckoutCart({
   handleBuy,
   preferenceId,
   walletRendered,
+  buttonVisible,
 }: CheckoutCartApp) {
   return (
     <section className="flex flex-col justify-center items-center p-6 mt-4 gap-6">
@@ -25,6 +26,7 @@ export default function CheckoutCart({
         handleBuy={handleBuy}
         preferenceId={preferenceId}
         walletRendered={walletRendered}
+        buttonVisible={buttonVisible}
       >
         {children}
       </CheckoutButton>

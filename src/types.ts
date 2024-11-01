@@ -43,6 +43,7 @@ export interface CartModalApp {
   checkoutStatus: boolean;
   itemsInCart: number;
   onDelete: () => void;
+  buttonVisible: boolean;
 }
 
 export interface CheckoutCartApp {
@@ -52,6 +53,7 @@ export interface CheckoutCartApp {
   preferenceId: string;
   walletRendered: boolean;
   children: ReactNode;
+  buttonVisible: boolean;
 }
 
 export interface CheckOutDetailProduct {
@@ -63,6 +65,7 @@ export interface CheckoutButtonApp {
   preferenceId: string;
   walletRendered: boolean;
   children: ReactNode;
+  buttonVisible: boolean;
 }
 
 export interface MobileProductImageApp {
