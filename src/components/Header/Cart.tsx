@@ -9,6 +9,7 @@ export default function Cart({
   onCart,
   checkoutStatus,
   onDelete,
+  buttonVisible,
 }: CartApp) {
   return (
     <section className="relative flex items-center justify-center">
@@ -30,6 +31,7 @@ export default function Cart({
         checkoutStatus={checkoutStatus}
         itemsInCart={itemsAdded}
         onDelete={onDelete}
+        buttonVisible={buttonVisible}
       />
     </section>
   );

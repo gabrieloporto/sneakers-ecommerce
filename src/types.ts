@@ -32,6 +32,7 @@ export interface CartApp {
   onCart: () => void;
   checkoutStatus: boolean;
   onDelete: () => void;
+  buttonVisible: boolean;
 }
 
 export interface OnMenu {
