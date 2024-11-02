@@ -8,9 +8,9 @@ export default function TextContent() {
         Sneakers de Edición Limitada para Otoño
       </h1>
       <p className="text-darkGrayishBlue text-sm leading-relaxed">
-        Estos sneakers de perfil bajo son el compañero perfecto para tu
-        vestimenta casual. Con una resistente suela exterior de goma, resistirán
-        todo lo que el clima pueda ofrecer.
+        Estos sneakers urbanos son el compañero perfecto para tu vestimenta
+        casual. Con una resistente suela exterior de goma, resistirán todo lo
+        que el clima pueda ofrecer.
       </p>
     </section>
   );
