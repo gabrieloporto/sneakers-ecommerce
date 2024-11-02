@@ -1,5 +1,5 @@
 import { useState } from "react";
-import imgProduct1 from "../.././assets/image-product-1.jpg";
+import imgProduct1 from "../.././assets/image-product-1.webp";
 import ProductThumbnailImage from "./ProductThumbnailImage.tsx";
 import { DesktopProductImageApp } from "../../types.js";
 

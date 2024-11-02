@@ -1,4 +1,4 @@
-import imgThumbnail1 from "../.././assets/image-product-1-thumbnail.jpg";
+import imgThumbnail1 from "../.././assets/image-product-1.webp";
 import { CheckOutDetailProduct } from "../../types";
 
 export default function CheckoutDetailProduct({

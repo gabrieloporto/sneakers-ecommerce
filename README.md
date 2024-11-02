@@ -23,32 +23,13 @@ Este proyecto es una solucion al [E-commerce product page challenge de Frontend 
 
 ### Datos de Pago
 
-Al proceder con el proceso de pago mediante el botón "Checkout", encontrarás a continuación el botón para realizar el pago a través de MercadoPago. El pago debe realizarse utilizando la opción de tarjeta de débito. A continuación, se te solicitarán los siguientes datos:
+Inicia sesion en mercado pago con la siguiente cuenta de pruebas para realizar tu pago desde la aplicacion.
 
-**Datos de Tarjetas (Tres opciones válidas):**
+**Email**: TESTUSER1931071961
 
-1. **Mastercard:**
+**Contraseña**: s8exV5kJnF
 
-   - Número de tarjeta: 5031 7557 3453 0604
-   - Vencimiento: 11/25
-   - CVV: 123
-
-2. **Visa:**
-
-   - Número de tarjeta: 4509 9535 6623 3704
-   - Vencimiento: 11/25
-   - CVV: 123
-
-3. **American Express:**
-   - Número de tarjeta: 3711 803032 57522
-   - Vencimiento: 11/25
-   - CVV: 1234
-
-**Datos Personales:**
-Para garantizar la aprobación de tu pago, se requiere la inclusión de los siguientes datos personales:
-
-- **Nombre:** APRO
-- **DNI:** 12345678
+**Codigo de confirmacion de 6 digitos**: 338807
 
 ## Proceso
 

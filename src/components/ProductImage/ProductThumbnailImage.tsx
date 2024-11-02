@@ -1,5 +1,5 @@
 import ThumbnailComponent from "./ThumbnailComponent";
-import { images, thumbnails } from "../../constants";
+import { images } from "../../constants";
 import { ProductThumbnailImageApp } from "../../types";
 
 export default function ProductThumbnailImage({
@@ -11,7 +11,7 @@ export default function ProductThumbnailImage({
 
   return (
     <div className="flex gap-8">
-      {thumbnails.map((thumbnail: string, index: number) => (
+      {images.map((thumbnail: string, index: number) => (
         <ThumbnailComponent
           key={index}
           imgThumbnail={thumbnail}
