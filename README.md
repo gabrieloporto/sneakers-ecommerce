@@ -79,13 +79,13 @@ El usuario accede a la página principal del producto, selecciona la cantidad de
 
 En el carrito, el usuario puede revisar su selección, eliminar productos o proceder al checkout.
 
-![Imagen Carrito y Checkout](public/checkout.webp)
+![Imagen Carrito y Checkout](public/Checkout.webp)
 
 ### Generación de Preferencia de Pago
 
 Al iniciar el checkout, se genera una preferencia de pago a través del backend utilizando el SDK de Mercado Pago. Esto crea un enlace seguro para que el usuario realice el pago.
 
-![Imagen Carrito y Checkout](public/checkoutmp.webp)
+![Imagen Carrito y Checkout](public/Checkoutmp.webp)
 
 ### Proceso de Pago
 
