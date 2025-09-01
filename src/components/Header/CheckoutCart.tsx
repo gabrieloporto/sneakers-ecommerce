@@ -11,6 +11,7 @@ export default function CheckoutCart({
   preferenceId,
   walletRendered,
   buttonVisible,
+  isLoading,
 }: CheckoutCartApp) {
   return (
     <section className="flex flex-col justify-center items-center p-6 mt-4 gap-6">
@@ -27,6 +28,7 @@ export default function CheckoutCart({
         preferenceId={preferenceId}
         walletRendered={walletRendered}
         buttonVisible={buttonVisible}
+        isLoading={isLoading}
       >
         {children}
       </CheckoutButton>
