@@ -53,6 +53,7 @@ export interface CheckoutCartApp {
   walletRendered: boolean;
   children: ReactNode;
   buttonVisible: boolean;
+  isLoading: boolean;
 }
 
 export interface CheckOutDetailProduct {
@@ -65,6 +66,7 @@ export interface CheckoutButtonApp {
   walletRendered: boolean;
   children: ReactNode;
   buttonVisible: boolean;
+  isLoading: boolean;
 }
 
 export interface MobileProductImageApp {
