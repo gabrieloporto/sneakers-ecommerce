@@ -2,13 +2,13 @@ import { useState } from "react";
 import useItemsCart from "./useItemsCart";
 
 export default function useCountProduct() {
-  const [countProduct, setCountProduct] = useState(0);
+  const [countProduct, setCountProduct] = useState(1);
   const { itemsInCart, checkoutCart, setItemsInCart, setCheckoutCart } =
     useItemsCart();
 
   const addProduct = () => setCountProduct(countProduct + 1);
   const subtractProduct = () =>
-    setCountProduct(countProduct > 0 ? countProduct - 1 : 0);
+    setCountProduct(countProduct > 1 ? countProduct - 1 : 1);
 
   const addItemCart = () => {
     if (countProduct > 0) {
