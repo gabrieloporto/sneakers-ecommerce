@@ -1,14 +1,11 @@
 import CheckoutCart from "./CheckoutCart.tsx";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import { useState, useEffect, useRef } from "react";
-import { CartModalApp } from "../../types.js";
+import { useCartContext } from "../../context/CartContext";
 
-export default function CartModal({
-  cartState,
-  checkoutStatus,
-  itemsInCart,
-  onDelete,
-}: CartModalApp) {
+export default function CartModal() {
+  const { cartIsActive, checkoutCart, itemsInCart, deleteItemCart } =
+    useCartContext();
   const [preferenceId, setPreferenceId] = useState("");
   const [walletRendered, setWalletRendered] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(true);
@@ -19,18 +16,10 @@ export default function CartModal({
 
   // Resetear el estado del checkout cuando cambie la cantidad de productos
   useEffect(() => {
-    console.log(
-      "CartModal useEffect - itemsInCart:",
-      itemsInCart,
-      "prev:",
-      prevItemsInCartRef.current
-    );
-
     // Si la cantidad de productos cambió, resetear todo el estado del checkout
     if (prevItemsInCartRef.current !== itemsInCart) {
       // Solo resetear si no es la primera vez (itemsInCart > 0) y hay un cambio real
       if (prevItemsInCartRef.current > 0 && itemsInCart > 0) {
-        console.log("🚨 Cantidad de productos cambió, reseteando checkout...");
         setPreferenceId("");
         setWalletRendered(false);
         setButtonVisible(true);
@@ -43,28 +32,28 @@ export default function CartModal({
     // Lógica adicional para manejar estados específicos
     if (itemsInCart === 0) {
       // Resetear todo cuando el carrito esté vacío
-      console.log("🔄 Carrito vacío, reseteando todo...");
+
       setPreferenceId("");
       setWalletRendered(false);
       setButtonVisible(true);
       setIsLoading(false);
     } else if (preferenceId && walletRendered) {
       // Si ya hay un botón de MP activo, ocultar el botón de checkout
-      console.log("✅ Botón MP activo, ocultando checkout...");
+
       setButtonVisible(false);
     } else if (!preferenceId && !walletRendered) {
       // Si no hay botón de MP activo, mostrar el botón de checkout
-      console.log("🆕 Sin botón MP, mostrando checkout...");
+
       setButtonVisible(true);
     }
   }, [itemsInCart, preferenceId, walletRendered]);
 
   // Resetear el estado cuando se cierre el carrito
   useEffect(() => {
-    if (!cartState) {
+    if (!cartIsActive) {
       setIsLoading(false);
     }
-  }, [cartState]);
+  }, [cartIsActive]);
 
   initMercadoPago("APP_USR-4ff5bdf7-60c5-4670-817f-9ec7b8f82dfe", {
     locale: "es-AR",
@@ -73,7 +62,7 @@ export default function CartModal({
   const createPreference = async () => {
     try {
       setIsLoading(true);
-      console.log("🔄 Creando preferencia de pago...");
+
       const res = await fetch(
         "https://sneaker-server.vercel.app/create_preference",
         {
@@ -95,10 +84,9 @@ export default function CartModal({
 
       const data = await res.json();
       const { id } = data;
-      console.log("✅ Preferencia creada:", id);
+
       return id;
     } catch (error) {
-      console.error("❌ Error creating preference:", error);
       return null;
     } finally {
       setIsLoading(false);
@@ -106,28 +94,26 @@ export default function CartModal({
   };
 
   const handleBuy = async () => {
-    console.log("🛒 Iniciando checkout...");
     const id = await createPreference();
     if (id) {
       setPreferenceId(id);
       setWalletRendered(true);
       setButtonVisible(false);
-      console.log("🎯 Botón MP activado");
     }
   };
 
   return (
     <div
-      className={`${cartState ? "absolute" : "hidden"} 
+      className={`${cartIsActive ? "absolute" : "hidden"} 
            inset-0 bg-white z-[999] w-[21rem] ${
              preferenceId && walletRendered && itemsInCart > 0 ? "h-96" : "h-72"
            } top-12 -left-[17rem] md:-left-[10rem] rounded-lg shadow-2xl object-contain`}
     >
       <h3 className="font-bold p-6">Carrito</h3>
-      {checkoutStatus ? (
+      {checkoutCart ? (
         <CheckoutCart
           itemsInCart={itemsInCart}
-          onDelete={onDelete}
+          onDelete={deleteItemCart}
           handleBuy={handleBuy}
           preferenceId={preferenceId}
           walletRendered={walletRendered}
