@@ -1,16 +1,18 @@
-import { MenuAndLogoApp } from "../../types.js";
+import { useUIContext } from "../../context/UIContext";
 import MenuButtonClose from "./MenuButtonClose.jsx";
 
-export default function Nav({ menu, onMenu }: MenuAndLogoApp) {
+export default function Nav() {
+  const { menuIsActive } = useUIContext();
+
   return (
     <nav
       className={`${
-        menu ? "absolute" : ""
+        menuIsActive ? "absolute" : ""
       } bg-white z-[9999] left-0 w-52 top-0 min-h-screen p-6 gap-8 ${
-        menu ? "flex" : "hidden"
+        menuIsActive ? "flex" : "hidden"
       } flex-col font-bold md:flex md:flex-row md:min-h-max md:p-0 md:font-normal md:text-darkGrayishBlue md:text-sm md:mt-6 md:ml-4 md:h-14`}
     >
-      <MenuButtonClose onMenu={onMenu} />
+      <MenuButtonClose />
       <a className="cursor-pointer hover:opacity-30 md:hover:opacity-100 md:border-b-4 border-b-transparent md:hover:border-b-blue md:hover:text-black transition-all duration-300 ease-in-out">
         Colecciones
       </a>
