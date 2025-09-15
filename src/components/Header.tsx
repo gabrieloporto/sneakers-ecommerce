@@ -1,27 +1,12 @@
 import MenuAndLogo from "./Header/MenuAndLogo.tsx";
 import Cart from "./Header/Cart.tsx";
-import { HeaderApp } from "../types.ts";
 
-export default function Header({
-  menu,
-  onMenu,
-  onCart,
-  onDelete,
-  cartState,
-  itemsAdded,
-  checkoutStatus,
-}: HeaderApp) {
+export default function Header() {
   return (
     <header className="sticky p-4 top-0 left-0 right-0 z-[1000] bg-white flex justify-between h-16 items-center md:h-[5.5rem] md:mb-8">
-      <MenuAndLogo menu={menu} onMenu={onMenu} />
+      <MenuAndLogo />
       <article className="flex gap-4 md:gap-10 md:mt-4">
-        <Cart
-          itemsAdded={itemsAdded}
-          cartState={cartState}
-          onCart={onCart}
-          checkoutStatus={checkoutStatus}
-          onDelete={onDelete}
-        />
+        <Cart />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
