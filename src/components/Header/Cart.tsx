@@ -1,36 +1,27 @@
 import cart from "../.././assets/icon-cart.svg";
 import cartActiveIcon from "../.././assets/icon-cart-active.svg";
 import CartModal from "./CartModal.jsx";
-import { CartApp } from "../../types.ts";
+import { useCartContext } from "../../context/CartContext";
 
-export default function Cart({
-  itemsAdded,
-  cartState,
-  onCart,
-  checkoutStatus,
-  onDelete,
-}: CartApp) {
+export default function Cart() {
+  const { itemsInCart, cartIsActive, toggleCart } = useCartContext();
+
   return (
     <section className="relative flex items-center justify-center">
       <p
         className={`${
-          itemsAdded > 0 ? "absolute" : "hidden"
+          itemsInCart > 0 ? "absolute" : "hidden"
         } -top-[2px] -right-[6px] md:top-[6px] bg-blue text-white w-4 h-3 rounded-full text-[8px] text-center font-bold z-[99999]`}
       >
-        {itemsAdded}
+        {itemsInCart}
       </p>
       <img
-        src={cartState ? cartActiveIcon : cart}
+        src={cartIsActive ? cartActiveIcon : cart}
         className="cursor-pointer"
-        onClick={onCart}
+        onClick={toggleCart}
         alt="cart"
       />
-      <CartModal
-        cartState={cartState}
-        checkoutStatus={checkoutStatus}
-        itemsInCart={itemsAdded}
-        onDelete={onDelete}
-      />
+      <CartModal />
     </section>
   );
 }
