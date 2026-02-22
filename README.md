@@ -1,122 +1,227 @@
-## Tabla de contenidos
+<p align="center">
+  <img src="public/logo.svg" alt="Sneakers Logo" width="200" />
+</p>
 
-- [Sneakers](#sneakers)
-  - [Descripción del Proyecto](#descripción-del-proyecto)
-  - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-  - [Estructura del Proyecto](#estructura-del-proyecto)
-  - [Funcionamiento y Flujo de la Aplicación](#funcionamiento-y-flujo-de-la-aplicación)
-    - [Proceso de Compra](#proceso-de-compra)
-    - [Carrito y Checkout](#carrito-y-checkout)
-    - [Generación de Preferencia de Pago](#generación-de-preferencia-de-pago)
-    - [Proceso de Pago](#proceso-de-pago)
-    - [Confirmación de la Compra](#confirmación-de-la-compra)
-  - [Autor](#autor)
+<h1 align="center">Sneakers — Tienda de Zapatillas Urbanas</h1>
 
-# Sneakers
+<p align="center">
+  <strong>E-commerce de zapatillas urbanas de edición limitada con integración de pagos vía Mercado Pago.</strong>
+</p>
 
-**Sneakers** es una tienda en línea dedicada a la venta de zapatillas urbanas de alta calidad. La aplicación ofrece una experiencia de usuario optimizada, permitiendo a los clientes seleccionar productos y realizar pagos seguros a través de **Mercado Pago** de forma rápida y sencilla.
-
-![Sneakers](public/logo.svg)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.2-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Mercado_Pago-SDK-009EE3?logo=mercadopago&logoColor=white" alt="Mercado Pago" />
+</p>
 
 ---
 
-## Descripción del Proyecto
+## 📋 Tabla de Contenidos
 
-**Sneakers** es una plataforma que facilita la compra de zapatillas urbanas. Los usuarios pueden seleccionar un producto, definir cantidades y completar su compra en un entorno seguro y confiable.
-
----
-
-## Tecnologías Utilizadas
-
-- **Frontend**:
-
-  - **React**: Para construir una interfaz de usuario interactiva y dinámica de forma eficiente.
-  - **TypeScript**: Para un desarrollo tipado, minimizando errores durante el desarrollo.
-  - **Vite**: Para un entorno de desarrollo rápido y eficiente, optimizando la construcción y el rendimiento de la aplicación.
-  - **Tailwind CSS**: Para una estilización rápida y responsiva, asegurando una interfaz visualmente atractiva.
-
-- **Backend**:
-
-  - **Node.js** y **Express**: Para gestionar el servidor y configurar los endpoints necesarios.
-  - **Mercado Pago SDK**: Utilizado para crear preferencias de pago y facilitar las transacciones.
-  - **Dotenv**: Para la gestión segura de variables de entorno.
-  - **CORS**: Para permitir el acceso desde diferentes orígenes en la aplicación.
-
-- **Vercel**: Para el despliegue del frontend y backend en producción.
+- [Descripción](#-descripción)
+- [Demo](#-demo)
+- [Características](#-características)
+- [Tech Stack](#-tech-stack)
+- [Arquitectura del Proyecto](#-arquitectura-del-proyecto)
+- [Instalación y Uso](#-instalación-y-uso)
+- [Flujo de Compra](#-flujo-de-compra)
+- [Autor](#-autor)
 
 ---
 
-## Estructura del Proyecto
+## 📝 Descripción
 
-La aplicación se organiza en las siguientes carpetas y archivos clave:
-
-- **Frontend**:
-
-  - **`/src/page.tsx`**: Página principal con el catálogo de productos.
-  - **`/src/layout.tsx`**: Configuración general del diseño y estilo de la aplicación.
-  - **`/src/components`**: Componentes reutilizables, como listas de productos y detalles.
-  - **`/src/hooks`**: Custom hooks que encapsulan lógica específica.
-  - **`/src/global.css`**: Estilos globales para toda la aplicación.
-  - **`/public`**: Recursos estáticos como el logo y otros elementos visuales.
-
-- **Backend**:
-  - **`/index.js`**: Archivo principal que configura el servidor y los endpoints en Express.
-  - **`/routes/create_preference.js`**: Endpoint para la generación de preferencias de pago mediante Mercado Pago.
-  - **`.env`**: Almacena variables de entorno, como el token de acceso de Mercado Pago.
-  - **`package.json`**: Contiene los detalles del proyecto y las dependencias de Node.js.
+**Sneakers** es una Single Page Application (SPA) de e-commerce diseñada para la venta de zapatillas urbanas de edición limitada. La aplicación ofrece una experiencia de usuario moderna y fluida, con diseño completamente responsivo (mobile-first) e integración completa con **Mercado Pago** para procesar pagos seguros.
 
 ---
 
-## Funcionamiento y Flujo de la Aplicación
+## 🚀 Demo
 
-### Proceso de Compra
-
-El usuario accede a la página principal del producto, selecciona la cantidad deseada y lo agrega al carrito de compra.
-
-![Imagen Inicio](public/Inicio.webp)
-
-### Carrito y Checkout
-
-En el carrito, el usuario puede revisar su selección, eliminar productos o proceder al checkout.
-
-![Imagen Carrito y Checkout](public/Checkout.webp)
-
-### Generación de Preferencia de Pago
-
-Al iniciar el checkout, se genera una preferencia de pago a través del backend utilizando el SDK de Mercado Pago. Esto crea un enlace seguro para que el usuario realice el pago.
-
-![Imagen Carrito y Checkout](public/Checkoutmp.webp)
-
-### Proceso de Pago
-
-Para completar la compra, se debe iniciar sesión en Mercado Pago con la cuenta de prueba proporcionada:
-
-- **Email:** TESTUSER1931071961
-- **Contraseña:** s8exV5kJnF
-- **Código de confirmación (si es solicitado):** 338807
-
-1. Inicia sesión con la cuenta de prueba de Mercado Pago.
-
-   ![Imagen de Inicio de Sesion](public/Ingresar-con-mi-cuenta.webp)
-
-2. Realiza el pago del producto.
-
-   ![Pago](public/Pago.webp)
-
-3. Ingresa el código de verificación de 6 dígitos si es solicitado.
-
-   ![Código de verificación](public/Codigo-verificacion.webp)
-
-4. Una vez realizado el pago, el usuario es redirigido automáticamente a la página principal de la tienda.
-
-   ![Pago realizado](public/Pago-realizado.webp)
-
-### Confirmación de la Compra
-
-Después de realizar el pago, el usuario es redirigido al inicio de la tienda, donde puede seguir explorando productos o realizar nuevas compras.
+|         Vista Desktop          |           Vista Mobile            |
+| :----------------------------: | :-------------------------------: |
+| ![Desktop](public/Inicio.webp) | ![Checkout](public/Checkout.webp) |
 
 ---
 
-## Autor
+## ✨ Características
 
-- Proyecto desarrollado por [Gabriel Oporto](https://gabrieloporto.vercel.app).
+- 🛍️ **Catálogo de producto** con galería de imágenes interactiva
+- 📱 **Diseño responsive** — slider táctil en mobile, galería con thumbnails y lightbox modal en desktop
+- 🛒 **Carrito de compras** con modal desplegable, selector de cantidad y resumen de pedido
+- 💳 **Checkout integrado** con Mercado Pago SDK (Wallet Brick)
+- ⚡ **Loading states** con skeleton loaders durante la preparación del pago
+- 🎨 **UI moderna** con Tailwind CSS, tipografía Kumbh Sans y transiciones suaves
+- 🏗️ **Arquitectura limpia** — Context API para estado global, custom hooks, componentes modulares
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+| Tecnología                 | Propósito                                            |
+| -------------------------- | ---------------------------------------------------- |
+| **React 18**               | UI declarativa con componentes funcionales y hooks   |
+| **TypeScript**             | Tipado estático para mayor robustez y autocompletado |
+| **Vite** + SWC             | Build tool ultrarrápido con Hot Module Replacement   |
+| **Tailwind CSS 3**         | Utility-first CSS para estilos responsivos           |
+| **Mercado Pago SDK React** | Componente `Wallet` para flujo de pago seguro        |
+
+### Backend (servicio externo)
+
+| Tecnología            | Propósito                                         |
+| --------------------- | ------------------------------------------------- |
+| **Node.js + Express** | API REST para crear preferencias de pago          |
+| **Mercado Pago SDK**  | Generación de preferencias de pago server-side    |
+| **Vercel**            | Hosting del backend (`sneaker-server.vercel.app`) |
+
+---
+
+## 📁 Arquitectura del Proyecto
+
+```
+sneakers-ecommerce/
+├── public/                      # Assets estáticos y screenshots
+│   └── logo.svg
+├── src/
+│   ├── assets/                  # Imágenes de producto e iconos SVG
+│   │   ├── image-product-{1-4}.webp
+│   │   └── icon-*.svg
+│   ├── components/
+│   │   ├── Header/              # Navbar, menú hamburguesa, carrito
+│   │   │   ├── Cart.tsx
+│   │   │   ├── CartModal.tsx         # Modal del carrito + lógica MercadoPago
+│   │   │   ├── CheckoutButton.tsx    # Botón de checkout con skeleton loader
+│   │   │   ├── CheckoutCart.tsx
+│   │   │   ├── CheckoutDetailProduct.tsx
+│   │   │   ├── CheckoutDeleteButton.tsx
+│   │   │   ├── MenuAndLogo.tsx
+│   │   │   ├── MenuButton.tsx / MenuButtonClose.tsx
+│   │   │   └── Nav.tsx
+│   │   ├── ProductImage/        # Galería de producto
+│   │   │   ├── MobileProductImage.tsx    # Slider con flechas prev/next
+│   │   │   ├── DesktopProductImage.tsx   # Galería con thumbnails clickeables
+│   │   │   ├── ProductThumbnailImage.tsx
+│   │   │   ├── ThumbnailComponent.tsx
+│   │   │   └── CloseModalButton.tsx
+│   │   ├── ShoppingCart/        # Sección de compra
+│   │   │   ├── ShoppingCartItem.tsx
+│   │   │   ├── QuantityItems.tsx
+│   │   │   ├── AddToCartButton.tsx
+│   │   │   └── DetailsProduct.tsx
+│   │   ├── ModalDesktopProduct.tsx   # Lightbox modal de producto
+│   │   ├── Header.tsx
+│   │   └── TextContent.tsx
+│   ├── context/
+│   │   ├── CartContext.tsx       # Estado global del carrito
+│   │   └── UIContext.tsx         # Estado global de UI (menú, modal)
+│   ├── hooks/
+│   │   ├── useCart.ts            # Hook del carrito
+│   │   ├── useCountProduct.ts   # Contador de cantidad
+│   │   ├── useDesktopModal.ts   # Control del lightbox
+│   │   ├── useItemsCart.ts      # Items del carrito
+│   │   ├── useMenu.ts           # Estado del menú mobile
+│   │   ├── useModalState.ts     # Estado del modal
+│   │   ├── useResize.ts         # Detección de tamaño de pantalla
+│   │   └── useSlider.ts         # Lógica del slider de imágenes
+│   ├── types.ts                 # Interfaces TypeScript
+│   ├── constants.ts             # Array de imágenes de producto
+│   ├── App.tsx                  # Componente raíz
+│   └── main.tsx                 # Entry point con providers
+├── index.html                   # HTML template
+├── vite.config.ts
+├── tailwind.config.js           # Colores custom (blue, darkGrayishBlue)
+├── tsconfig.json
+└── package.json
+```
+
+---
+
+## ⚙️ Instalación y Uso
+
+### Prerrequisitos
+
+- **Node.js** ≥ 18
+- **pnpm** (recomendado) o npm
+
+### Pasos
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/gabrieloporto/sneakers-ecommerce.git
+cd sneakers-ecommerce
+
+# 2. Instalar dependencias
+pnpm install
+
+# 3. Iniciar servidor de desarrollo
+pnpm dev
+```
+
+La aplicación estará disponible en `http://localhost:5173`.
+
+### Scripts disponibles
+
+| Comando        | Descripción                                         |
+| -------------- | --------------------------------------------------- |
+| `pnpm dev`     | Inicia el servidor de desarrollo con HMR            |
+| `pnpm build`   | Compila TypeScript y genera el bundle de producción |
+| `pnpm preview` | Previsualiza el build de producción                 |
+| `pnpm lint`    | Ejecuta ESLint sobre el proyecto                    |
+
+---
+
+## 🛒 Flujo de Compra
+
+### 1. Explorar el Producto
+
+El usuario accede a la página principal donde visualiza el producto con una galería interactiva de imágenes. En **mobile** se navega con un slider (prev/next), y en **desktop** se seleccionan thumbnails con opción de abrir un lightbox modal.
+
+<p align="center">
+  <img src="public/Inicio.webp" alt="Página principal" width="700" />
+</p>
+
+### 2. Agregar al Carrito
+
+Se selecciona la cantidad deseada y se agrega al carrito. El ícono del carrito en el header muestra un badge con la cantidad de items.
+
+### 3. Revisar el Carrito
+
+Al hacer clic en el carrito se despliega un modal con el resumen del pedido: imagen del producto, nombre, precio unitario, cantidad y total. Se puede eliminar el item o proceder al checkout.
+
+<p align="center">
+  <img src="public/Checkout.webp" alt="Carrito y checkout" width="700" />
+</p>
+
+### 4. Checkout con Mercado Pago
+
+Al presionar **"Checkout"**, se genera una preferencia de pago en el backend y se renderiza el **Wallet Brick** de Mercado Pago. Un skeleton loader indica que el método de pago se está preparando.
+
+<p align="center">
+  <img src="public/Checkoutmp.webp" alt="Checkout Mercado Pago" width="700" />
+</p>
+
+### 5. Completar el Pago
+
+El usuario es redirigido al flujo de Mercado Pago donde completa la transacción de forma segura. Una vez finalizado, se redirige a la tienda.
+
+| Paso                           |                     Captura                      |
+| :----------------------------- | :----------------------------------------------: |
+| Iniciar sesión en Mercado Pago |   ![Login](public/Ingresar-con-mi-cuenta.webp)   |
+| Realizar el pago               |            ![Pago](public/Pago.webp)             |
+| Verificación (si aplica)       | ![Verificación](public/Codigo-verificacion.webp) |
+| Pago confirmado                |    ![Confirmado](public/Pago-realizado.webp)     |
+
+---
+
+## 👤 Autor
+
+Desarrollado por **[Gabriel Oporto](https://gabrieloporto.vercel.app)**.
+
+<p align="center">
+  <a href="https://github.com/gabrieloporto">
+    <img src="https://img.shields.io/badge/GitHub-gabrieloporto-181717?logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
