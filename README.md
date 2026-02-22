@@ -205,14 +205,35 @@ Al presionar **"Checkout"**, se genera una preferencia de pago en el backend y s
 
 ### 5. Completar el Pago
 
-El usuario es redirigido al flujo de Mercado Pago donde completa la transacción de forma segura. Una vez finalizado, se redirige a la tienda.
+Para completar la compra, se debe iniciar sesión en Mercado Pago con la **cuenta de prueba** proporcionada:
 
-| Paso                           |                     Captura                      |
-| :----------------------------- | :----------------------------------------------: |
-| Iniciar sesión en Mercado Pago |   ![Login](public/Ingresar-con-mi-cuenta.webp)   |
-| Realizar el pago               |            ![Pago](public/Pago.webp)             |
-| Verificación (si aplica)       | ![Verificación](public/Codigo-verificacion.webp) |
-| Pago confirmado                |    ![Confirmado](public/Pago-realizado.webp)     |
+| Campo                                         | Valor                |
+| --------------------------------------------- | -------------------- |
+| **Email**                                     | `TESTUSER1931071961` |
+| **Contraseña**                                | `s8exV5kJnF`         |
+| **Código de confirmación** (si es solicitado) | `338807`             |
+
+**Pasos del proceso de pago:**
+
+1. Inicia sesión con la cuenta de prueba de Mercado Pago.
+
+   ![Inicio de sesión](public/Ingresar-con-mi-cuenta.webp)
+
+2. Realiza el pago del producto.
+
+   ![Pago](public/Pago.webp)
+
+3. Ingresa el código de verificación de 6 dígitos si es solicitado.
+
+   ![Código de verificación](public/Codigo-verificacion.webp)
+
+4. Una vez realizado el pago, el usuario es redirigido automáticamente a la página principal de la tienda.
+
+   ![Pago realizado](public/Pago-realizado.webp)
+
+### 6. Confirmación
+
+Después de realizar el pago, el usuario es redirigido al inicio de la tienda, donde puede seguir explorando productos o realizar nuevas compras.
 
 ---
 
